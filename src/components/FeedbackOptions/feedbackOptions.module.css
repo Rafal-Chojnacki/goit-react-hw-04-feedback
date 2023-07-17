@@ -1,0 +1,44 @@
+.wrapper {
+    width: 400px;
+    margin:auto
+}
+.goodBtn {
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: green;
+    text-transform: uppercase;
+    color: white;
+}
+.goodBtn:hover {
+    cursor: pointer;
+}
+.neutralBtn {
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: yellow;
+    text-transform: uppercase;
+    color: black;
+}
+.neutralBtn:hover {
+    cursor: pointer;
+}
+.badBtn {
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: red;
+    text-transform: uppercase;
+    color: white;
+}
+.badBtn:hover {
+    cursor: pointer;
+}
+
+.statisticTitle {
+    color: black;
+}
