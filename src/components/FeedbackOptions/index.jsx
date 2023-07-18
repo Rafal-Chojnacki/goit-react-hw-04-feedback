@@ -1,39 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
 import css from "./feedbackOptions.module.css";
 
-class FeedbackOptions extends Component {
-  
-  static defaultProps = {
-    step: 1,
+const FeedbackOptions = ({ onFeedbackChange }) => {
+  const handleGood = () => {
+    onFeedbackChange("good");
   };
 
-  handleGood = () => {
-    this.props.onFeedbackChange("good");
+  const handleNeutral = () => {
+    onFeedbackChange("neutral");
   };
 
-  handleNeutral = () => {
-    this.props.onFeedbackChange("neutral");
+  const handleBad = () => {
+    onFeedbackChange("bad");
   };
 
-  handleBad = () => {
-    this.props.onFeedbackChange("bad");
-  };
-
-  render() {
-    return (
-      <div>
-        <button className={css.goodBtn} type="button" onClick={this.handleGood}>
-          Good
-        </button>
-        <button className={css.neutralBtn} type="button" onClick={this.handleNeutral}>
-          Neutral
-        </button>
-        <button className={css.badBtn} type="button" onClick={this.handleBad}>
-          Bad
-        </button>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <button className={css.goodBtn} type="button" onClick={handleGood}>
+        Good
+      </button>
+      <button className={css.neutralBtn} type="button" onClick={handleNeutral}>
+        Neutral
+      </button>
+      <button className={css.badBtn} type="button" onClick={handleBad}>
+        Bad
+      </button>
+    </div>
+  );
+};
 
 export default FeedbackOptions;
